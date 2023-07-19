@@ -1,58 +1,845 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js nikki.build</title>
+<link type="text/css" href="res/css/common.css" rel="stylesheet" />
+<link type="text/css" href="res/css/mw.cells.css" rel="stylesheet" />
+<link type="text/css" href="res/css/mw.loaderse39a.css?3c59dc048e8850243be8079a5c74d079" rel="stylesheet" />
+<link type="text/css" href="res/css/mw.formse39a.css?3c59dc048e8850243be8079a5c74d079" rel="stylesheet" />
+<link type="text/css" href="res/css/mw.windowse39a.css?3c59dc048e8850243be8079a5c74d079" rel="stylesheet" />
+<link type="text/css" href="cms3t/res/vit-lib/status.css" rel="stylesheet" />
+<link type="text/css" href="cms3t/res/vit-lib/code_coloring.css" rel="stylesheet" />
+<link type="text/css" href="cms3t/res/vit-lib/syntax.css" rel="stylesheet" />
+<link type="text/css" href="cms3t/res/mediaelement/mediaelementplayer.css" rel="stylesheet" />
+<link type="text/css" href="cms3t/res/css/mw.media.css" rel="stylesheet" />
+<link type="text/css" href="res/pages/css/front.css" rel="stylesheet" />
+<link type="text/css" href="res/pages/css/spacer.css" rel="stylesheet" />
+<link type="text/css" href="res/button/css/button.css" rel="stylesheet" />
 
 
-    <script>
-        function on() {
-            document.getElementById("imgID").src = "on.svg"
-        }
+<script type="text/javascript" src="cms3t/res/js/json2.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/jquery.js"></script>
+<script type="text/javascript" src="cms3t/res/mediaelement/mediaelement-and-player.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.media.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/ui/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/ui/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/jquery.AjaxUpload.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/hoverIntent.js"></script>
+<script type="text/javascript" src="cms3t/res/js/jQuery/superfish.js"></script>
+<script type="text/javascript" src="cms3t/res/vit-lib/common.js"></script>
+<script type="text/javascript" src="cms3t/res/vit-lib/ajax.js"></script>
+<script type="text/javascript" src="cms3t/res/vit-lib/debug.js"></script>
+<script type="text/javascript" src="cms3t/res/vit-lib/console.js"></script>
+<script type="text/javascript">CMS_ALIAS = 'cms3t';CMS_RES = 'res';CMS_JS = 'js';CMS_CSS = 'css';CMS_IMAGES = 'images';</script>
+<script type="text/javascript" src="cms3t/res/js/mw.urls.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.debug.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.common.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.system.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.windows.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.forms.js"></script>
+<script type="text/javascript" src="res/system/js/mwSelectInput.js"></script>
+<script type="text/javascript" src="cms3t/res/js/mw.front.js"></script>
+<script type="text/javascript" src="res/pages/js/mw.responsive.js"></script>
+<script type="text/javascript" src="res/button/js/button.js"></script>
+<script type="text/javascript" src="res/intouch/js/block.contacts.js"></script>
 
-        function off() {
-            document.getElementById("imgID").src = "off.svg"
-        }
 
-        function inputChanged() {
-            let inText = document.getElementById("inputID").value
 
-            if (inText && inText.includes("on")) {
-                on()
-            }
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png">
+<!-- CSS -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owlcarousel.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/fonts.css">
 
-            if (inText && inText.includes("off")) {
-                off()
-            }
-        }
 
-    </script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="Where do we begin? Pretty much where every other college ends. Explore our 60+ majors and programs." />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>GMIT</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/all.css">
+<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owlcarousel.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/fonts.css">
+<style type="text/css">
+
+ul {
+  list-style-type: none;
+}
+.dropbtn {
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+    font-family:'Trebuchet MS';
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #740426;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color:#740426;color:#EDB111;}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: #fff;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+   
+}
+
+
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+</style>
 </head>
-
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-dropdownhover.min.js"></script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS74HMN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- bulb image -->
-    <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 60vh;">
-        <img src="./off.svg" id="imgID" width="100%" height="126px">
+
+
+
+<div class="mobileIcon trans"> 
+<span class="trans"></span> 
+<span></span> 
+<span class="trans"></span> 
+</div>
+
+<div class="mobileMenuWrap trans">
+<div class="mobileMenu">
+
+<h5><a href="#" class="active"> About Us</a></h5>
+<div  class="mwPageBlock Menu" style="">
+<div class="blockContents">
+<ul>
+<li class="no-children"><a href="about-trust.html" target="_top"><span class="Title">Trust</span></a></li>
+<li class="no-children"><a href="aboutus_overview.html" target="_top"><span class="Title"> GMIT Overview</span></a></li>
+<li class="no-children"><a href="aboutus_milestones.html" target="_top"><span class="Title">GMIT Milestones</span></a></li>
+<li class="no-children"><a href="aboutus_gc.html" target="_top"><span class="Title">Disclosures</span></a></li>
+<li class="no-children"><a href="aboutus_gc.html" target="_top"><span class="Title">Governing council</span></a></li>
+<li class="no-children"><a href="aboutus_chairmandesk.html" target="_top"><span class="Title">Chairman Desk</span></a></li>
+<li class="no-children"><a href="aboutus_principaldesk.html" target="_top"><span class="Title">Principal desk</span></a></li>
+</ul>
+</div>
+</div>
+
+<h5><a href="#">Alumni</a></h5>
+<div class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li class="no-children"><a href="alumniassociation.html" target="_top"><span class="Title">Alumni association</span></a></li>
+<li class="no-children"><a href="alumni_msg.html" target="_top"><span class="Title">Alumnae message</span></a></li>
+<li class="no-children"><a href="alumnievents.html" target="_top"><span class="Title">Alumni events</span></a></li>
+</ul>
+</div>
+</div>
+
+<h5><a href="#" target="_top">Research</a></h5> 
+<div class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li class="no-children"><a href="GMIT-Research.html" target="_top"><span class="Title">Overview</span></a></li>
+<li class="no-children"><a href="research_patents.html" target="_top"><span class="Title">Academic Research</span></a></li>
+<li class="no-children"><a href="iprcell.html" target="_top"><span class="Title">IPR Cell</span></a></li>
+
+</ul>
+</div>
+</div>
+
+<h5><a href="#">Campus</a></h5>
+<div class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li><a href="hostels.html" target="_top"><span class="Title">Student Housing</a></li>
+<li><a href="sports.html" target="_top">Sports</a></li>
+<li><a href="greencampus.html" target="_top">Green Campus</a></li>
+<li class="no-children"><a href="campus_cenlib.html" target="_top"><span class="Title">Central Library</span></a></li>
+<li class="no-children"><a href="campus_aud.html" target="_top"><span class="Title">Auditorium</span></a></li>
+<li class="no-children"><a href="campus_admblk.html" target="_top"><span class="Title">Admin Block</span></a></li>
+</ul>
+</div>
+</div>
+<h5><a href="#">Mandate</a></h5>
+<div id=" " class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li class="no-children"><a href='aicte.html' target="_top"><span class="Title">AICTE</span></a></li>
+				  <li class="no-children"><a href='pdfs/2(f) UGC,NBA,NAAC Stauts3.pdf'  target="_top"><span class="Title">NAAC</span></a></li>
+				  <li class="no-children"><a href='pdfs/NBA 2022.pdf' target="_top"><span class="Title">NBA</span></a></li>
+				  <li class="no-children"><a href='pdfs/NIRF report.pdf' target="_top"><span class="Title">NIRF</span></a></li>
+				  <li class="no-children"><a href='pdfs/SIRO Certificate.pdf' target="_top"><span class="Title">SIRO</span></a></li>
+				  <li><a href='pdfs/service rules.pdf' target="_top">SERVICE RULES</a></li>		
+</ul>
+</div></div>
+
+
+
+<h5><a href="#">Academics</a></h5>
+<div id=" " class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li class="no-children"><a href="academics_ug.html" target="_top"><span class="Title">UG</span></a></li>
+<li class="no-children"><a href="academics_pg.html" target="_top"><span class="Title">PG</span></a></li>
+<li class="no-children"><a href="academics_diploma.html" target="_top"><span class="Title">GMIT Polytechnic</span></a></li>
+<li class="no-children"><a href="aboutus_coe.html" target="_top"><span class="Title">Calender of events</span></a></li>
+<li class="no-children"><a href="aboutus_cur.html" target="_top"><span class="Title">Curriculum</span></a></li>
+<li class="no-children"><a href="office.html" target="_top"><span class="Title">Administration staff</span></a></li>
+</ul>
+</div></div>
+<h5><a href="#">Placements</a></h5>
+<div id=" " class="mwPageBlock Menu" style=""><div class="blockContents">
+<ul id=" ">
+<li class="no-children"><a href="placements_overview.html" target="_top"><span class="Title">Overview</a></li>
+<li class="no-children"><a href="placements_tpo.html" target="_top"><span class="Title">TPO desk</span></a></li>
+<li class="no-children"><a href="pdfs/MOU LIST.pdf" target="_top"><span class="Title">MoUs</span></a></li>
+<li class="no-children"><a href="placements_ref.html" target="_top"><span class="Title">GMIT Reflections</span></a></li>
+</ul>
+</div>
+</div>
+<h5><a href="iqac.html">IQAC</a></h5>
+<h5><a href="pfds/NIRF report.pdf">NIRF</a></h5>
+ <h5><a href='NISP.html'>GMISP</a></h5>
+<div class="dropdown" style="float:left;">
+  <div class="applyButton" style="transform: rotate(0deg);float: center;animation: blinker 1.5s linear infinite;">&nbsp;&nbsp;
+
+        		   <a href='http://erp.gmit.info/axis/'>ERP ONLINE PAYMENT</a></button></div>
+				   
+
+        		   
+				   
+          </div> 
+        </div>		  
+</div>
+</div>
+
+
+
+
+
+<div class="headerWraper trans">
+  <div class="headerWrap trans">
+    <div class="header">
+      <div class="headerLeft">
+       <div class="logo"> <a href="index.html"><img src="images/logo11.png" alt="GMIT College | GMIT College" /></a> </div>
+		</div>
+		
+      <div class="headerRight">              
+
+        <div class="headerRightTop">
+          <div class="utilityMenu">
+		  
+            <ul>			 <li > <a href='index.html'><i class=" w3-padding-2 glyphicon glyphicon-home w3-text-white" ></i></a></li>
+
+
+              <li class="menuDark">
+			  <a href="#">About Us 
+			  <img src="images/chevron-down-white.png" alt="Resources" /></a>
+                <ul>
+				<li><a href="about-trust.html" target="_top">Trust</a></li>
+				  
+                  <li><a href="aboutus_overview.html" target="_top">GMIT Overview</a></li>
+                  <li><a href="aboutus_milestones.html" target="_top">GMIT Milestones</a></li>
+                  <li><a href="aboutus_disclosures.html" target="_top">Disclosures</a></li>
+				  
+                  <li><a href="aboutus_gc.html" target="_top">Governing Council</a></li>
+				  <li><a href="aboutus_chairmandesk.html" target="_top">Chairman Desk</a></li>
+                  <li><a href="aboutus_principaldesk.html" target="_top">Principal Desk</a></li>
+                </ul>
+				</li>
+				
+              <li class="menuDark"><a href="#" class="bold">Alumni <img src="images/chevron-down-white.png" alt="Resources" /></a>
+			  <ul>
+                  <li><a href="alumniassociation.html" target="_top">Alumni Association</a></li>
+                  <li><a href="alumni_msg.html" target="_top">Alumnae Message</a></li>
+				  <li><a href="alumnievents.html" target="_top">Alumni Events</a></li>
+              </ul>
+			  </li>
+			  
+			  
+              <li class="menuDark"><a href="#">Research <img src="images/chevron-down-white.png" alt="Resources" /></a>
+			  <ul>
+                  
+				  <li><a href="GMIT-Research.html" target="_top">Overview</a></li>
+                  <li><a href="academicresearch.html"target="_top">Academic Research</a></li>
+				  <li><a href="pdfs/GMIT-IPR report.pdf" target="_top">IPR Cell</a></li>
+                 
+                </ul></li>
+			  <li class="menuDark"><a href="#" class="bold" target="_top">Campus <img src="images/chevron-down-white.png" alt="Resources" /></a>
+			  <ul>
+                  <li><a href="hostels.html" target="_top">Student Housing</a></li>
+                  
+				  <li><a href="sports.html" target="_top">Sports</a></li>
+				  <li><a href="greencampus.html" target="_top">Green Campus</a></li>
+				  <li><a href="campus_cenlib.html" target="_top">Central Library</a></li>
+				  <li><a href="campus_aud.html" target="_top">Auditorium</a></li>
+				  <li><a href="campus_admblk.html" target="_top">Admin Block</a></li>
+				  
+                </ul>
+				</li>
+				
+				
+				<li class="menuDark"><a href="#" class="bold" target="_top">mandate <img src="images/chevron-down-white.png" alt="Resources" /></a>
+			  <ul>
+                  <li><a href='aicte.html' target="_top">AICTE</a></li>
+				  <li><a href='pdfs/2(f) UGC,NBA,NAAC Stauts3.pdf'  target="_top">NAAC</a></li>
+				  <li><a href='pdfs/NBA 2022.pdf' target="_top">NBA</a></li>
+				  <li><a href='pdfs/NIRF report.pdf' target="_top">NIRF</a></li>
+				  <li><a href='pdfs/SIRO Certificate.pdf' target="_top">SIRO</a></li>
+				  <li><a href='pdfs/service rules.pdf' target="_top">SERVICE RULES</a></li>				  
+                </ul>
+				</li>
+				
+				
+          </ul>
+          </div>
+                  </div>
+        
+          <div class="headerRightBottom">
+          <div class="mainMenu">
+		  
+		   
+            <ul>
+              <div class="dropdown">
+  <button class="dropbtn">ACADEMICS</button>
+  <div class="dropdown-content">
+  <a href="academics_ug.html" target="_top">UG</a>
+  <a href="academics_pg.html" target="_top">PG</a>
+  
+  
+  <a href="academics_diploma.html" target="_top">GMIT Ploytechnic</a>
+  <a href="academics_coe.html" target="_top">Calender of Events</a>
+  <a href="academics_cur.html" target="_top">Curriculum</a>
+  <a href="office.html" target="_top">Adminsitrative Staff</a>
+  
+  </div>
+</div>
+              <div class="dropdown" style="float:left;">
+  <button class="dropbtn">PLACEMENTS</button>
+  <div class="dropdown-content">	
+  <a href="placements_overview.html" target="_top">Overview</a>
+				  <a href="placements_tpo.html" target="_top">TPO Desk</a>
+				  <a href="pdfs/MOU LIST.pdf" target="_top">MoUs</a>
+				  <a href="placements_ref.html" target="_top">GMIT Reflections</a>
+  </div>           			
+          </div>
+		  
+		   <div class="dropdown" style="float:left;">
+  <button class="dropbtn"><a href='iqac.html' style='text-decoration:none;color:black;'>IQAC</a></button>
+  </div>
+  <div class="dropdown" style="float:left;">
+  <button class="dropbtn"><a href="pdfs/NIRF report.pdf" style='text-decoration:none;color:black;'>NIRF</a></button>
+          			
+          </div>
+          
+        <h4><a href='NISP.html'>GMISP</a></h4>
+          
+ <div class="dropdown" style="float:right;">
+  <div class="applyButton" style="transform: rotate(0deg);float: center;animation: blinker 1.5s linear infinite;">&nbsp;&nbsp;
+
+        		   <a href='http://erp.gmit.info/axis/'>ERP ONLINE PAYMENT</a></button>
+				  </div>
+				 
+        	
+          </div> 
+        </div>		  
+		   
+          </div> 
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+     
+<div class="spacer"></div>
 
 
-    <!-- buttons to control -->
-    <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 20;">
 
-        <button class="btn btn-primary" style="font-size: 1.5rem ; margin: 1rem ;padding: .5rem;" width="100%"
-            onclick="on()" type="button">on</button>
 
-        <button class="btn btn-primary" style="font-size: 1.5rem ;margin: 1rem  ;padding: .5rem" width="100%"
-            onclick="off()" type="button">off</button>
 
-        <input type="text" name="" id="inputID" onchange="inputChanged()"
-            style="font-size: 1.5rem ; margin: 1rem ;padding: .5rem;">
+<!-- -----------------page body------------>
+<div class="mh-100">
+<div>
+  <div class="mwPageArea"><div id="w5YI39C5398XEN1Y" class="mwPageBlock Include" style="">
+  <div class="homeBannerWrap">
+    <div class="homeBannerVideo">
+      <video autoplay loop muted preload="metadata">
+        <source src="images/homevideo202112.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. </video>
+      <div class="videoBannerInner">
+        <div class="videoBanner">
+		<h2 style="font-family:'Trebuchet MS';">  		  
+		<div>
+		   </div></h2>
+          
+		    </div>
+      </div>
+		          </div>
+      </div>
     </div>
+  </div>
+  </div></div>
+  <div id="w4R9F2RXSY8V9PPW" class="mwPageBlock Include" style=""><div class="blockContents"><div class="introIconsWrap">
+  <div class="introIcons ">
+  
+  <div class="introIcon trans teallight"><a href="http://erp.gmit.info/axis/">
+      <div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/fid1.png"  "class="trans" ; style="animation: blinker 1.5s linear infinite;"> </div>
+      <p class="trans">ONLINE FEE <br>PAYMENT
+        </p></a>
+    </div>
+    <div class="introIcon trans pink"><a href="academics_ug.html">
+      <div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/icon_undergraduate.png" alt="undergraduate" class="trans"> </div>
+      <p class="trans">UNDERGRADUATE<br />
+        PROGRAMS</p></a>
+    </div>
+    <div class="introIcon trans teallight"><a href="academics_pg.html">
+      <div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/icon_graduate.png"  alt="graduate" class="trans"> </div>
+      <p class="trans">GRADUATE<br />
+        PROGRAMS</p></a>
+    </div>
+	
+	  <div class="introIcon trans yellow"><a href="academics_diploma.html">
+      <div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/Dipicon1.png"  alt="graduate" class="trans"> </div>
+      <p class="trans"> GMIT Polytechnic<br />
+        PROGRAMS</p></a>
+    </div>
+	
+	 
+    
+    <div class="introIcon trans teal"><a href="ratings&rankings.html">
+      <div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/product.png" style='border-radius=50%;' alt="product" class="trans"> </div>
+      <p class="trans">RATINGS & <br> RANKINGS</p></a>
+    </div>
+	<div class="introIcon trans teal"><a href="visit.html">
+	<div class="introIconCircleWrap trans">
+        <div class="introIconCircle trans"></div>
+        <img src="images/visit1.png"  alt="financial" class="trans"> </div>
+      <p class="trans">CAMPUS<br />
+        MAP</p></a>
+    </div>
+	
 
+  </div>
+</div>
+</div></div>
+<br>
+<br>
+  <div class="mainContentArea">
+    <div class="mwPageArea"><div id="wGSRZOX2CTV1C30Z" class="mwPageBlock Include" style=""><div class="blockContents">
+	<div class="eightHundred">
+    <div class="mwPageArea">
+	<div class="mwPageBlock Content" style="">
+<div class="blockContents"><center>
+ 
+ <marquee width="150%" direction="left" height="60px" behavior="scroll" scrollamount="3">
+
+ <h4 style='color:blue;'> We are proud to be Accreditated by NBA for all eligible UG Programs<br>
+</h4>
+ 
+
+</marquee>
+<br>
+
+</div></div>
+
+<!-====================================-->
+<style>
+.textblink p {
+            font-size: 22px;
+            font-family: serif;
+            color: maroon;
+            text-align: center;
+            animation: animate 
+                2s linear infinite;
+        }
+  
+        @keyframes animate {
+            0% {
+                opacity: 0;
+            }
+  
+            50% {
+                opacity: 3;
+            }
+  
+            100% {
+                opacity: 0;
+            }
+        }
+</style>
+
+<center>
+<div class="textblink">
+
+<p><img src="images/new.gif">Admissions Open for 2023-24</p>
+
+</div>
+</center>
+
+<!-====================================-->
+
+
+<div class="blockContents"><center>
+ 
+
+
+ <h4 style='color:blue;'> For Any Queries Related to Admissions Please Contact Below given Number<br>
+ 
+</h4>
+ 
+
+<h5>Dr. Sunil Kumar B S </h5>
+<h5> +919986325163 </h5>
+
+</center>
+</div>
+<br>
+
+
+<div class="clear"> </div>
+
+<div id="wSX4FHX6SGDPAB1G" class="mwPageBlock Spacer" style=""><div class="blockContents"><div  class="mwSpacer hor" style="height:39px;">
+</div></div></div><div class="Clear"></div></div>
+
+</div>
+
+</div></div><div id="wB8732C1Q54BGK7T" class="mwPageBlock Include" style=""><div class="blockContents"><div class="threeColumn">
+	<div class="threeCol">
+		<div class="mwPageArea"><div id="wGVPSFVMA1JQ3HF9" class="mwPageBlock File" style=""><div class="blockContents">
+  <div class="homeImageHoverWrapper trans pink">
+    <div class="homeImage trans" style="background:url(images/etnic.jpg) center center no-repeat; background-size: cover;">
+      <h4>Events</h4><div class="postTwoGradient"></div>
+      <div class="homeImageColorbar trans"></div>
+    </div>
+    <div class="homeImageContent"> <p>Organised events with nearly limitless opportunities to show your talents.</p>
+      <div class="homeImageButton trans">
+        <a href="events.html">Read More</a>
+      </div>
+    </div>
+  </div>
+</div></div><div class="Clear"></div></div>
+	</div>
+	<div class="threeCol">
+		<div class="mwPageArea"><div id="wYI8F51ASK4TD3B2" class="mwPageBlock File" style=""><div class="blockContents">
+  <div class="homeImageHoverWrapper trans teal">
+    <div class="homeImage trans" style="background:url(images/indexplacement.JPG) center center no-repeat; background-size: cover;">
+      <h4>Placements</h4><div class="postTwoGradient"></div>
+      <div class="homeImageColorbar trans"></div>
+    </div>
+    <div class="homeImageContent"> <p>Grow as a leader and advance in your profession with our programs and get placed in top companies with heighest package.</p>
+      <div class="homeImageButton trans">
+        <a href="placements_overview.html">Read More</a>
+      </div>
+    </div>
+  </div>
+</div></div><div class="Clear"></div></div>
+	</div>
+	<div class="threeCol">
+		<div class="mwPageArea"><div id="wGG4DJI5ETCW2CEA" class="mwPageBlock File" style=""><div class="blockContents">
+  <div class="homeImageHoverWrapper trans blue">
+    <div class="homeImage trans" style="background:url(images/result2.jpg) center center no-repeat; background-size: cover;">
+      <h4>Results and Ranks</h4><div class="postTwoGradient"></div>
+      <div class="homeImageColorbar trans"></div>
+    </div>
+    <div class="homeImageContent"> <p> Get Ready for new Begin...</p>
+      <div class="homeImageButton trans">
+        <a href="results&ranks.html">Read More</a>
+      </div></div></div></div></div></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+  
+<br><br>
+	  
+<img src="images/student.png">
+<br><br>
+<div class='center1'>
+<button type="button" 
+style='color: white; background-color: #ffcc00 ;  
+border-decoration:none;  font-size: 20px;  
+margin: 5px 3px;  cursor: pointer;border-radius: 25px; '
+
+class="button"><span><a href="pdfs/Student Projects.pdf"> Read More </a></span></button>
+                  </div>
+</div>
+	  
+	  
+	  
+	  
+	  
+<br>
+<br>
+
+  
+<div class="Clear"></div></div>
+	</div>
+</div>
+</div></div><div class="Clear"></div></div>
+  </div>
+</div>
+<div class="Clear"></div>
+</div></div>
+<div id="w28LN46AYXLBFDEE" class="mwPageBlock Include" style="">
+<div class="blockContents">
+<div class="contentArea light lined">
+<div class="mainContentArea">
+<div class="mwPageArea">
+<div id="w4900GNGG8YBC9QE" class="mwPageBlock File" style="">
+<div class="blockContents">	
+<div class="testimonialWrap"> 
+<div class="testimonialImage" style="background:url(images/stu1.jpg) center center no-repeat; background-size: cover;"> 
+<img src="images/quote_open.png" class="testimonialOpen" /></div>
+<div class="testimonialCopy"> 
+
+<p>At GMIT, We&rsquo;ve been able to develop our communication skills and 
+learned how to work well independently and on a team. With the support of our professors, 
+We&rsquo;ve been able to gain valuable career experience on and off campus. Ultimately, 
+We&rsquo;are becoming a stronger leaders. </p><p>- Students from GMIT</p>
+
+<img src="images/quote_close.png"class="testimonialClose"/>
+</div>
+</div></div></div>
+<div class="Clear"></div>
+</div></div></div>
+</div>
+</div>
+<div class="contentArea white">
+  <div class="mainContentArea">
+    <h3 class="fftitle" style="text-align: center;">Get ready for a bright <br>
+      future </h3>
+    <div class="mwSpacer small hor"></div>
+    <div class="nineSixty">
+      <div class="threeColumn">
+        <div class="threeCol">
+          <div class="mwBtnCenter">
+            <div class="button border">
+              <p class='paragraph'> <a href="requestmoreinfo.html" template="default" class="medium"> REQUEST MORE INFO </a> </p>
+            </div>
+          </div>
+        </div>
+        <div class="threeCol">
+          <div id="wEROV4Z2ELSFP0TR" class="mwPageBlock Button" style="">
+            <div class="mwBtnCenter">
+              <div class="button yellow">
+                <p class='paragraph'> <a href="pdfs/Fee Structure 2023.pdf" template="default" class="medium">  ADMISSION NOW </a> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="threeCol">
+          <div class="mwBtnCenter">
+            <div class="button border">
+              <p class='paragraph'> <a href="explore_programs.html" template="default" class="medium">EXPLORE PROGRAMS</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+	  <!--------------page body ends-------------------------->
+	  
+	  
+	 <!-- ------------------footer---------------------------> 
+
+<div class="subfooter"><img src="images/college1.jpg" alt="GMIT College" /></div>
+<div class="footerWrap">
+  <div class="footer">
+    <div class="footerCol">
+      <div class="footerLogo"> <img src="images/favicon1.png" alt="GMIT College" /> </div>
+    </div>
+    <div class="footerCol">
+      <div id="wXZXV9AHBLLJ9U3J" class="mwPageBlock Content" style=""><div class="blockContents"><p>
+        P.BOX. No.4
+		
+        <br />
+        P B Road,Davangere-577006
+        <br />
+		<a href="mailto:careers@gmit.ac.in"> Mail Us:info@gmit.ac.in</a>
+<br>
+        Call Us on: <br>
+		08192-296035,<br>
+		08192-233345, 233377, 252777
+        <br />
+ </p>       
+<ul>
+        
+        <li>
+                
+        </li>
+</ul></div></div>
+    </div>
+    <div class="footerCol">
+		
+		          <div id="w82S8I7KRGOQTJIH" class="mwPageBlock Menu" style=""><div class="blockContents"><ul id="mJ4F5CRJd">
+<li class="no-children"><a href="#"><span class="Title">Careers at GMIT</span></a></li>
+<li class="no-children"><a href="events.html"><span class="Title">Event Spaces</span></a></li>
+
+<li class="no-children"><a href="Privacy-Policy.html"><span class="Title">Privacy Policy</span></a></li></ul></div></div>
+
+    </div>
+    <div class="footerCol">
+		
+		          <div id="wZD0URBAPC0QYL48" class="mwPageBlock Menu" style=""><div class="blockContents"><ul id="mBhNiz1b7">
+<li class="no-children"><a href="https://gmit.irins.org" target="_top"><span class="Title">Faculty & Staff</span></a></li>
+<li class="no-children"><a href="pdfs/2(f) UGC,NBA,NAAC Stauts3.pdf"><span class="Title">Accreditation</span></a></li>
+<li class="no-children"><a href="https://www.google.com/maps/place/GM+Institute+of+Technology/@14.4753709,75.8844944,402m/data=!3m1!1e3!4m5!3m4!1s0x0:0x9b42a50b7155a708!8m2!3d14.4755964!4d75.8847986"><span class="Title">Visit GMIT</span></a></li>
+
+				
+    </div>
+  </div>
+</div>
+<!-- Magnific Popup --> 
+<script src="js/jquery.magnific-popup.js"></script> 
+<!-- Owl Carousel --> 
+<script src="js/owl.carousel.js"></script> 
+<!-- Images Resize --> 
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('img').removeAttr('width height');
+	});
+	</script> 
+<script src="../cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script> 
+<script src="js/jquery.countup.js"></script> 
+<script>
+	$('.counter').countUp();
+	</script> 
+<!-- Scripts --> 
+<script src="js/scripts.js"></script> 
+<script>
+	(function() {
+		var s = document.createElement('script'),
+			e = !document.body ? document.querySelector('head') : document.body;
+		s.src = '../acsbapp.com/apps/app/dist/js/app.js';
+		s.async = true;
+		s.onload = function() {
+			acsbJS.init({
+				statementLink: '',
+				footerHtml: '',
+				hideMobile: false,
+				hideTrigger: false,
+				language: 'en',
+				position: 'left',
+				leadColor: '#98002e',
+				triggerColor: '#98002e',
+				triggerRadius: '50%',
+				triggerPositionX: 'left',
+				triggerPositionY: 'bottom',
+				triggerIcon: 'wheels',
+				triggerSize: 'small',
+				triggerOffsetX: 20,
+				triggerOffsetY: 20,
+				mobile: {
+					triggerSize: 'small',
+					triggerPositionX: 'right',
+					triggerPositionY: 'center',
+					triggerOffsetX: 10,
+					triggerOffsetY: 0,
+					triggerRadius: '50%'
+				}
+			});
+		};
+		e.appendChild(s);
+	}());
+	</script>
 </body>
 
 </html>
